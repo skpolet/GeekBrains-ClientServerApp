@@ -13,8 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let session = Session.instance
+        session.token = "token"
+        session.userId = 1
+        
     }
-
-
+    
 }
 
