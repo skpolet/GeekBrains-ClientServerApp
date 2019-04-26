@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100AF22724BBD00CFD867 /* AppDelegate.swift */; };
-		E19100B222724BBD00CFD867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100B122724BBD00CFD867 /* ViewController.swift */; };
 		E19100B522724BBD00CFD867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19100B322724BBD00CFD867 /* Main.storyboard */; };
 		E19100B722724BC300CFD867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19100B622724BC300CFD867 /* Assets.xcassets */; };
 		E19100BA22724BC300CFD867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19100B822724BC300CFD867 /* LaunchScreen.storyboard */; };
 		E19100C322724C6200CFD867 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100C222724C6200CFD867 /* Session.swift */; };
+		E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100C422730C1500CFD867 /* AuthViewController.swift */; };
+		E19100C722730C8500CFD867 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100C622730C8500CFD867 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E19100AC22724BBD00CFD867 /* GeekBrains-ClientServerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeekBrains-ClientServerApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19100AF22724BBD00CFD867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E19100B122724BBD00CFD867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E19100B422724BBD00CFD867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E19100B622724BC300CFD867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E19100B922724BC300CFD867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E19100BB22724BC300CFD867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E19100C222724C6200CFD867 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		E19100C422730C1500CFD867 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E19100C622730C8500CFD867 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				E19100AF22724BBD00CFD867 /* AppDelegate.swift */,
-				E19100B122724BBD00CFD867 /* ViewController.swift */,
-				E19100B322724BBD00CFD867 /* Main.storyboard */,
+				E19100C422730C1500CFD867 /* AuthViewController.swift */,
+				E19100C622730C8500CFD867 /* LoginView.swift */,
 				E19100C122724C4300CFD867 /* Services */,
 				E19100B622724BC300CFD867 /* Assets.xcassets */,
+				E19100B322724BBD00CFD867 /* Main.storyboard */,
 				E19100B822724BC300CFD867 /* LaunchScreen.storyboard */,
 				E19100BB22724BC300CFD867 /* Info.plist */,
 			);
@@ -146,8 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E19100B222724BBD00CFD867 /* ViewController.swift in Sources */,
+				E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */,
 				E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */,
+				E19100C722730C8500CFD867 /* LoginView.swift in Sources */,
 				E19100C322724C6200CFD867 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
