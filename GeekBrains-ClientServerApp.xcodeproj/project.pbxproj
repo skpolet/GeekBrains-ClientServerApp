@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD3582C65993BA1199096750 /* Pods_GeekBrains_ClientServerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7DBDF80E8687F90FDEC2B /* Pods_GeekBrains_ClientServerApp.framework */; };
+		E122B398227848F0009469C8 /* AuthVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122B397227848F0009469C8 /* AuthVKController.swift */; };
+		E122B39B2278492E009469C8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E122B39A2278492E009469C8 /* WebKit.framework */; };
 		E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100AF22724BBD00CFD867 /* AppDelegate.swift */; };
 		E19100B522724BBD00CFD867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19100B322724BBD00CFD867 /* Main.storyboard */; };
 		E19100B722724BC300CFD867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19100B622724BC300CFD867 /* Assets.xcassets */; };
@@ -17,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6DB7DAD8C7690F6F904168B6 /* Pods-GeekBrains-ClientServerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrains-ClientServerApp.release.xcconfig"; path = "Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp.release.xcconfig"; sourceTree = "<group>"; };
+		7C49D76FCE6D45FF651052B9 /* Pods-GeekBrains-ClientServerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrains-ClientServerApp.debug.xcconfig"; path = "Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E122B397227848F0009469C8 /* AuthVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVKController.swift; sourceTree = "<group>"; };
+		E122B39A2278492E009469C8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E19100AC22724BBD00CFD867 /* GeekBrains-ClientServerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeekBrains-ClientServerApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19100AF22724BBD00CFD867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19100B422724BBD00CFD867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		E19100C222724C6200CFD867 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		E19100C422730C1500CFD867 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E19100C622730C8500CFD867 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EFD7DBDF80E8687F90FDEC2B /* Pods_GeekBrains_ClientServerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekBrains_ClientServerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E122B39B2278492E009469C8 /* WebKit.framework in Frameworks */,
+				BD3582C65993BA1199096750 /* Pods_GeekBrains_ClientServerApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72FB0864F4BC81A6F0FF8714 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C49D76FCE6D45FF651052B9 /* Pods-GeekBrains-ClientServerApp.debug.xcconfig */,
+				6DB7DAD8C7690F6F904168B6 /* Pods-GeekBrains-ClientServerApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E122B3992278492E009469C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E122B39A2278492E009469C8 /* WebKit.framework */,
+				EFD7DBDF80E8687F90FDEC2B /* Pods_GeekBrains_ClientServerApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E19100A322724BBD00CFD867 = {
 			isa = PBXGroup;
 			children = (
 				E19100AE22724BBD00CFD867 /* GeekBrains-ClientServerApp */,
 				E19100AD22724BBD00CFD867 /* Products */,
+				E122B3992278492E009469C8 /* Frameworks */,
+				72FB0864F4BC81A6F0FF8714 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +91,7 @@
 			children = (
 				E19100AF22724BBD00CFD867 /* AppDelegate.swift */,
 				E19100C422730C1500CFD867 /* AuthViewController.swift */,
+				E122B397227848F0009469C8 /* AuthVKController.swift */,
 				E19100C622730C8500CFD867 /* LoginView.swift */,
 				E19100C122724C4300CFD867 /* Services */,
 				E19100B622724BC300CFD867 /* Assets.xcassets */,
@@ -85,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E19100BE22724BC300CFD867 /* Build configuration list for PBXNativeTarget "GeekBrains-ClientServerApp" */;
 			buildPhases = (
+				A786B567A826630962CA69D3 /* [CP] Check Pods Manifest.lock */,
 				E19100A822724BBD00CFD867 /* Sources */,
 				E19100A922724BBD00CFD867 /* Frameworks */,
 				E19100AA22724BBD00CFD867 /* Resources */,
+				9DF4B7222BBDF85BC8D84437 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,11 +178,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9DF4B7222BBDF85BC8D84437 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A786B567A826630962CA69D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeekBrains-ClientServerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E19100A822724BBD00CFD867 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E122B398227848F0009469C8 /* AuthVKController.swift in Sources */,
 				E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */,
 				E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */,
 				E19100C722730C8500CFD867 /* LoginView.swift in Sources */,
@@ -296,6 +378,7 @@
 		};
 		E19100BF22724BC300CFD867 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C49D76FCE6D45FF651052B9 /* Pods-GeekBrains-ClientServerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +397,7 @@
 		};
 		E19100C022724BC300CFD867 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB7DAD8C7690F6F904168B6 /* Pods-GeekBrains-ClientServerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
