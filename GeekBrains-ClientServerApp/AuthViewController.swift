@@ -16,9 +16,9 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let session = Session.instance
-        session.token = "token"
-        session.userId = 1
+        //let session = Session.instance
+        //session.token = "token"
+        //session.userId = 1
         
         
         // жест нажатия
