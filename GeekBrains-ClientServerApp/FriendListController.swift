@@ -27,19 +27,13 @@ class FriendListController: UIViewController {
         let session = Session.instance
        
        let URL = "https://api.vk.com/method/friends.get?user_id=\(session.userId)&access_token=\(session.token)&order=name&fields=city,domain&name_case=ins&count=5&fields=photo_50&v=5.68"
-//        Alamofire.request(URL).responseJSON { (response) in
-//            print("friendList :\(response)")
-//        }
+
         Alamofire.request(URL).responseObject { (response: DataResponse<ResponseFriends>) in
-            //print("groupsList :\(response)")
+
             let responseObject = response.result.value
-            //print("groupList : \(String(describing: response.result.value))")
             print("friendList : \(String(describing: responseObject?.response)) and: \(URL)")
             
             if let friendList = responseObject?.response {
-                //for group in groupList {
-                //print(groupList.items)
-                // }
                 self.friendListResponse = friendList
                 self.tableView.reloadData()
                 if let friends = friendList.items{
