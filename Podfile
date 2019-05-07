@@ -8,5 +8,7 @@ target 'GeekBrains-ClientServerApp' do
   # Pods for GeekBrains-ClientServerApp
 
 	pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
+  pod 'SDWebImage'
 
 end

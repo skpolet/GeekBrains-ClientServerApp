@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BD3582C65993BA1199096750 /* Pods_GeekBrains_ClientServerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7DBDF80E8687F90FDEC2B /* Pods_GeekBrains_ClientServerApp.framework */; };
+		E121FC9422817A0F00A767EC /* GroupListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121FC9322817A0F00A767EC /* GroupListController.swift */; };
+		E121FC9622817A2300A767EC /* FriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121FC9522817A2300A767EC /* FriendListController.swift */; };
 		E122B398227848F0009469C8 /* AuthVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122B397227848F0009469C8 /* AuthVKController.swift */; };
 		E122B39B2278492E009469C8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E122B39A2278492E009469C8 /* WebKit.framework */; };
 		E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100AF22724BBD00CFD867 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		6DB7DAD8C7690F6F904168B6 /* Pods-GeekBrains-ClientServerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrains-ClientServerApp.release.xcconfig"; path = "Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp.release.xcconfig"; sourceTree = "<group>"; };
 		7C49D76FCE6D45FF651052B9 /* Pods-GeekBrains-ClientServerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrains-ClientServerApp.debug.xcconfig"; path = "Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E121FC9322817A0F00A767EC /* GroupListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListController.swift; sourceTree = "<group>"; };
+		E121FC9522817A2300A767EC /* FriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListController.swift; sourceTree = "<group>"; };
 		E122B397227848F0009469C8 /* AuthVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVKController.swift; sourceTree = "<group>"; };
 		E122B39A2278492E009469C8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E19100AC22724BBD00CFD867 /* GeekBrains-ClientServerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeekBrains-ClientServerApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,8 +59,16 @@
 				7C49D76FCE6D45FF651052B9 /* Pods-GeekBrains-ClientServerApp.debug.xcconfig */,
 				6DB7DAD8C7690F6F904168B6 /* Pods-GeekBrains-ClientServerApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E121FC92228179BE00A767EC /* AuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E19100C622730C8500CFD867 /* LoginView.swift */,
+				E19100C422730C1500CFD867 /* AuthViewController.swift */,
+			);
+			path = AuthViewController;
 			sourceTree = "<group>";
 		};
 		E122B3992278492E009469C8 /* Frameworks */ = {
@@ -90,9 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				E19100AF22724BBD00CFD867 /* AppDelegate.swift */,
-				E19100C422730C1500CFD867 /* AuthViewController.swift */,
+				E121FC92228179BE00A767EC /* AuthViewController */,
 				E122B397227848F0009469C8 /* AuthVKController.swift */,
-				E19100C622730C8500CFD867 /* LoginView.swift */,
+				E121FC9322817A0F00A767EC /* GroupListController.swift */,
+				E121FC9522817A2300A767EC /* FriendListController.swift */,
 				E19100C122724C4300CFD867 /* Services */,
 				E19100B622724BC300CFD867 /* Assets.xcassets */,
 				E19100B322724BBD00CFD867 /* Main.storyboard */,
@@ -189,12 +202,18 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -231,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E122B398227848F0009469C8 /* AuthVKController.swift in Sources */,
+				E121FC9422817A0F00A767EC /* GroupListController.swift in Sources */,
 				E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */,
+				E121FC9622817A2300A767EC /* FriendListController.swift in Sources */,
 				E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */,
 				E19100C722730C8500CFD867 /* LoginView.swift in Sources */,
 				E19100C322724C6200CFD867 /* Session.swift in Sources */,
