@@ -10,5 +10,6 @@ target 'GeekBrains-ClientServerApp' do
 	pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'SDWebImage'
+  pod 'SwiftKeychainWrapper'
 
 end

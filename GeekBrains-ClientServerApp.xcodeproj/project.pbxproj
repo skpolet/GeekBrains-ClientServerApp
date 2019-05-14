@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BD3582C65993BA1199096750 /* Pods_GeekBrains_ClientServerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7DBDF80E8687F90FDEC2B /* Pods_GeekBrains_ClientServerApp.framework */; };
+		E11DA04E228AD44500FFEE5D /* ResponseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11DA04D228AD44500FFEE5D /* ResponseUser.swift */; };
+		E11DA050228AD44E00FFEE5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11DA04F228AD44E00FFEE5D /* User.swift */; };
 		E121FC9422817A0F00A767EC /* GroupListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121FC9322817A0F00A767EC /* GroupListController.swift */; };
 		E121FC9622817A2300A767EC /* FriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121FC9522817A2300A767EC /* FriendListController.swift */; };
 		E122B398227848F0009469C8 /* AuthVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122B397227848F0009469C8 /* AuthVKController.swift */; };
@@ -19,11 +21,20 @@
 		E19100C322724C6200CFD867 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100C222724C6200CFD867 /* Session.swift */; };
 		E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100C422730C1500CFD867 /* AuthViewController.swift */; };
 		E19100C722730C8500CFD867 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100C622730C8500CFD867 /* LoginView.swift */; };
+		E19CEF1C22898F3200835869 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF1B22898F3200835869 /* VKService.swift */; };
+		E19CEF1F228996F700835869 /* ResponseFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF1E228996F700835869 /* ResponseFriends.swift */; };
+		E19CEF212289970600835869 /* FriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF202289970600835869 /* FriendList.swift */; };
+		E19CEF232289971700835869 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF222289971700835869 /* Friend.swift */; };
+		E19CEF252289972E00835869 /* ResponseGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF242289972E00835869 /* ResponseGroups.swift */; };
+		E19CEF272289973E00835869 /* GroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF262289973E00835869 /* GroupList.swift */; };
+		E19CEF292289975100835869 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19CEF282289975100835869 /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6DB7DAD8C7690F6F904168B6 /* Pods-GeekBrains-ClientServerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrains-ClientServerApp.release.xcconfig"; path = "Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp.release.xcconfig"; sourceTree = "<group>"; };
 		7C49D76FCE6D45FF651052B9 /* Pods-GeekBrains-ClientServerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrains-ClientServerApp.debug.xcconfig"; path = "Target Support Files/Pods-GeekBrains-ClientServerApp/Pods-GeekBrains-ClientServerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E11DA04D228AD44500FFEE5D /* ResponseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUser.swift; sourceTree = "<group>"; };
+		E11DA04F228AD44E00FFEE5D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E121FC9322817A0F00A767EC /* GroupListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListController.swift; sourceTree = "<group>"; };
 		E121FC9522817A2300A767EC /* FriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListController.swift; sourceTree = "<group>"; };
 		E122B397227848F0009469C8 /* AuthVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVKController.swift; sourceTree = "<group>"; };
@@ -37,6 +48,13 @@
 		E19100C222724C6200CFD867 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		E19100C422730C1500CFD867 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E19100C622730C8500CFD867 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E19CEF1B22898F3200835869 /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		E19CEF1E228996F700835869 /* ResponseFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFriends.swift; sourceTree = "<group>"; };
+		E19CEF202289970600835869 /* FriendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendList.swift; sourceTree = "<group>"; };
+		E19CEF222289971700835869 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E19CEF242289972E00835869 /* ResponseGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseGroups.swift; sourceTree = "<group>"; };
+		E19CEF262289973E00835869 /* GroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupList.swift; sourceTree = "<group>"; };
+		E19CEF282289975100835869 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		EFD7DBDF80E8687F90FDEC2B /* Pods_GeekBrains_ClientServerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekBrains_ClientServerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +124,7 @@
 				E122B397227848F0009469C8 /* AuthVKController.swift */,
 				E121FC9322817A0F00A767EC /* GroupListController.swift */,
 				E121FC9522817A2300A767EC /* FriendListController.swift */,
+				E19CEF1D228996C000835869 /* Mapping */,
 				E19100C122724C4300CFD867 /* Services */,
 				E19100B622724BC300CFD867 /* Assets.xcassets */,
 				E19100B322724BBD00CFD867 /* Main.storyboard */,
@@ -119,8 +138,24 @@
 			isa = PBXGroup;
 			children = (
 				E19100C222724C6200CFD867 /* Session.swift */,
+				E19CEF1B22898F3200835869 /* VKService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E19CEF1D228996C000835869 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				E19CEF1E228996F700835869 /* ResponseFriends.swift */,
+				E19CEF202289970600835869 /* FriendList.swift */,
+				E19CEF222289971700835869 /* Friend.swift */,
+				E19CEF242289972E00835869 /* ResponseGroups.swift */,
+				E19CEF262289973E00835869 /* GroupList.swift */,
+				E19CEF282289975100835869 /* Group.swift */,
+				E11DA04D228AD44500FFEE5D /* ResponseUser.swift */,
+				E11DA04F228AD44E00FFEE5D /* User.swift */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +240,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -214,6 +250,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,12 +287,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E122B398227848F0009469C8 /* AuthVKController.swift in Sources */,
+				E19CEF212289970600835869 /* FriendList.swift in Sources */,
 				E121FC9422817A0F00A767EC /* GroupListController.swift in Sources */,
 				E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */,
+				E11DA050228AD44E00FFEE5D /* User.swift in Sources */,
+				E19CEF272289973E00835869 /* GroupList.swift in Sources */,
 				E121FC9622817A2300A767EC /* FriendListController.swift in Sources */,
+				E19CEF1C22898F3200835869 /* VKService.swift in Sources */,
+				E19CEF292289975100835869 /* Group.swift in Sources */,
+				E19CEF252289972E00835869 /* ResponseGroups.swift in Sources */,
+				E11DA04E228AD44500FFEE5D /* ResponseUser.swift in Sources */,
 				E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */,
+				E19CEF1F228996F700835869 /* ResponseFriends.swift in Sources */,
 				E19100C722730C8500CFD867 /* LoginView.swift in Sources */,
 				E19100C322724C6200CFD867 /* Session.swift in Sources */,
+				E19CEF232289971700835869 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import WebKit
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import SwiftKeychainWrapper
 
 class AuthVKController: UIViewController {
 
@@ -60,12 +61,24 @@ extension AuthVKController: WKNavigationDelegate {
                 return dict
         }
         
-        let token = params["access_token"]
-        let userId = params["user_id"]
+        guard let token = params["access_token"]
+            else{
+                return
+        }
+        guard let userId = params["user_id"]
+            else{
+                return
+        }
+        print("param: \(params)")
         let session = Session.instance
-        session.token = token!
-        session.userId = userId!
-
+        KeychainWrapper.standard.set(token, forKey: "vkToken")
+        session.userId = userId
+        
+        let vkService = VKService()
+        vkService.getUserWithID(user_id: userId) { user in
+            print("callbackUser:\(user)")
+        }
+        
         //getFriends()
         //getGroups()
         //getGroupsWithString(name: "ILIZIUM")

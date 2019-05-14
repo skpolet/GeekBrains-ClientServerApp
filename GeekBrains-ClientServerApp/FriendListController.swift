@@ -19,29 +19,10 @@ class FriendListController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        getFriends()
-    }
-    
-
-    func getFriends(){
-        let session = Session.instance
-       
-       let URL = "https://api.vk.com/method/friends.get?user_id=\(session.userId)&access_token=\(session.token)&order=name&fields=city,domain&name_case=ins&count=5&fields=photo_50&v=5.68"
-
-        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseFriends>) in
-
-            let responseObject = response.result.value
-            print("friendList : \(String(describing: responseObject?.response)) and: \(URL)")
-            
-            if let friendList = responseObject?.response {
-                self.friendListResponse = friendList
-                self.tableView.reloadData()
-                if let friends = friendList.items{
-                    for friend in friends{
-                        print("friend: \(String(describing: friend.name))")
-                    }
-                }
-            }
+        let vkService = VKService()
+        vkService.getFriends { result in
+            self.friendListResponse = result
+            self.tableView.reloadData()
         }
     }
 
@@ -66,51 +47,5 @@ extension FriendListController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
-    
-    
 }
 
-class ResponseFriends: Mappable {
-    var response: FriendList?
-    
-    required init?(map: Map){
-        
-    }
-    
-    func mapping(map: Map) {
-        response <- map["response"]
-    }
-}
-
-class FriendList: Mappable {
-    var count: String?
-    var items: [Friend]?
-    
-    required init?(map: Map){
-    }
-    
-    func mapping(map: Map) {
-        let mapItems = map["response"]
-        count <- mapItems["count"]
-        items <- mapItems["items"]
-        print("mapItems: \(mapItems), items :\(String(describing: items))")
-    }
-}
-
-class Friend: Mappable {
-    var name: String?
-    var lastname: String?
-    var photo_50: String?
-    var online: String?
-    
-    required init?(map: Map){
-        
-    }
-    
-    func mapping(map: Map) {
-        name <- map["first_name"]
-        lastname <- map["last_name"]
-        photo_50 <- map["photo_50"]
-        online <- map["online"]
-    }
-}
