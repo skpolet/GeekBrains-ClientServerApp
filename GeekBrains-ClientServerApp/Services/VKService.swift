@@ -16,7 +16,7 @@ class VKService: NSObject {
     
     func getGroupsWithString(name :String, completion: @escaping (_ result: GroupList)->()){
         let session = Session.instance
-        Alamofire.request("https://api.vk.com/method/groups.search?user_id=\(session.userId)&access_token=\(session.token)&q=\(name)&v=5.68").responseJSON { (response) in
+        AF.request("https://api.vk.com/method/groups.search?user_id=\(session.userId)&access_token=\(session.token)&q=\(name)&v=5.68").responseJSON { (response) in
             print("GroupSearch :\(response)")
         }
     }
@@ -25,7 +25,7 @@ class VKService: NSObject {
         let session = Session.instance
         //        Alamofire.request("https://api.vk.com/method/groups.get?user_id=\(session.userId)&access_token=\(session.token)&extended=1&count=5&v=5.68").responseJSON { (response) in
         let URL = "https://api.vk.com/method/groups.get?user_id=\(session.userId)&access_token=\(session.token)&extended=1&count=5&v=5.68"
-        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseGroups>) in
+        AF.request(URL).responseObject { (response: DataResponse<ResponseGroups>) in
             //print("groupsList :\(response)")
             let responseObject = response.result.value
             //print("groupList : \(String(describing: response.result.value))")
@@ -47,7 +47,7 @@ class VKService: NSObject {
         
         let URL = "https://api.vk.com/method/friends.get?user_id=\(session.userId)&access_token=\(session.token)&order=name&fields=city,domain&name_case=ins&count=5&fields=photo_50&v=5.68"
         
-        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseFriends>) in
+        AF.request(URL).responseObject { (response: DataResponse<ResponseFriends>) in
             
             let responseObject = response.result.value
             print("friendList : \(String(describing: responseObject?.response)) and: \(URL)")
@@ -68,7 +68,7 @@ class VKService: NSObject {
         
         let URL = "https://api.vk.com/method/users.get?user_ids=\(user_id)&fields=bdate&access_token=\(session.token)&v=5.95"
         
-        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseUser>) in
+        AF.request(URL).responseObject { (response: DataResponse<ResponseUser>) in
             
             if let responseObject = response.result.value{
                 print("userInfo : \(String(describing: responseObject.response?[0].name)) and: \(URL)")

@@ -45,14 +45,28 @@ extension GroupListController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = group.name
         cell.detailTextLabel?.text = group.type
         let imgUrl = URL(string:group.photo_100!)
-        cell.imageView?.sd_setImage(with: imgUrl, placeholderImage: UIImage(named: "noimg"))
- 
-        
+        guard let writenImage = UIImage(fileURLWithPath: imgUrl!) else {
+            cell.imageView?.sd_setImage(with: imgUrl, placeholderImage: UIImage(named: "noimg"), options: SDWebImageOptions(rawValue: 0), completed: { (image, error, cacheType, imageURL) in
+                print("загружено!")
+                guard let path = imageURL?.path else{
+                    return
+                }
+                guard let img = image else{
+                    return
+                }
+                let tempDirectoryUrl = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(path)
+                guard let url = img.save(at: tempDirectoryUrl) else {
+                    return
+                    
+                }
+                print("Успешно сохранено! :\(url)")
+            })
+            return cell
+            
+        }
+        cell.imageView?.image = writenImage
         return cell
     }
-    
-    
-    
 }
 
 

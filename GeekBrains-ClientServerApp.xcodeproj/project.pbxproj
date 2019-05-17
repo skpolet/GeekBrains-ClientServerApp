@@ -14,6 +14,7 @@
 		E121FC9622817A2300A767EC /* FriendListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121FC9522817A2300A767EC /* FriendListController.swift */; };
 		E122B398227848F0009469C8 /* AuthVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E122B397227848F0009469C8 /* AuthVKController.swift */; };
 		E122B39B2278492E009469C8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E122B39A2278492E009469C8 /* WebKit.framework */; };
+		E12559A8228ECF5000EA0D3F /* WriteImagesToFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12559A7228ECF5000EA0D3F /* WriteImagesToFile.swift */; };
 		E19100B022724BBD00CFD867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19100AF22724BBD00CFD867 /* AppDelegate.swift */; };
 		E19100B522724BBD00CFD867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E19100B322724BBD00CFD867 /* Main.storyboard */; };
 		E19100B722724BC300CFD867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19100B622724BC300CFD867 /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 		E121FC9522817A2300A767EC /* FriendListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListController.swift; sourceTree = "<group>"; };
 		E122B397227848F0009469C8 /* AuthVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVKController.swift; sourceTree = "<group>"; };
 		E122B39A2278492E009469C8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E12559A5228EC94600EA0D3F /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Pods/Alamofire/Source/Alamofire.swift; sourceTree = "<group>"; };
+		E12559A7228ECF5000EA0D3F /* WriteImagesToFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteImagesToFile.swift; sourceTree = "<group>"; };
 		E19100AC22724BBD00CFD867 /* GeekBrains-ClientServerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeekBrains-ClientServerApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19100AF22724BBD00CFD867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19100B422724BBD00CFD867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		E19100A322724BBD00CFD867 = {
 			isa = PBXGroup;
 			children = (
+				E12559A5228EC94600EA0D3F /* Alamofire.swift */,
 				E19100AE22724BBD00CFD867 /* GeekBrains-ClientServerApp */,
 				E19100AD22724BBD00CFD867 /* Products */,
 				E122B3992278492E009469C8 /* Frameworks */,
@@ -124,6 +128,7 @@
 				E122B397227848F0009469C8 /* AuthVKController.swift */,
 				E121FC9322817A0F00A767EC /* GroupListController.swift */,
 				E121FC9522817A2300A767EC /* FriendListController.swift */,
+				E12559A7228ECF5000EA0D3F /* WriteImagesToFile.swift */,
 				E19CEF1D228996C000835869 /* Mapping */,
 				E19100C122724C4300CFD867 /* Services */,
 				E19100B622724BC300CFD867 /* Assets.xcassets */,
@@ -288,6 +293,7 @@
 			files = (
 				E122B398227848F0009469C8 /* AuthVKController.swift in Sources */,
 				E19CEF212289970600835869 /* FriendList.swift in Sources */,
+				E12559A8228ECF5000EA0D3F /* WriteImagesToFile.swift in Sources */,
 				E121FC9422817A0F00A767EC /* GroupListController.swift in Sources */,
 				E19100C522730C1500CFD867 /* AuthViewController.swift in Sources */,
 				E11DA050228AD44E00FFEE5D /* User.swift in Sources */,
