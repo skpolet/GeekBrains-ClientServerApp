@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import SDWebImage
 
 class FriendListController: UIViewController {
 
@@ -43,8 +44,26 @@ extension FriendListController: UITableViewDelegate, UITableViewDataSource{
         cell.textLabel?.text = friend.name
         cell.detailTextLabel?.text = friend.lastname
         let imgUrl = URL(string:friend.photo_50!)
-        cell.imageView?.sd_setImage(with: imgUrl, placeholderImage: UIImage(named: "noimg"))
-        
+        guard let writenImage = UIImage(fileURLWithPath: imgUrl!) else {
+            cell.imageView?.sd_setImage(with: imgUrl, placeholderImage: UIImage(named: "noimg"), options: SDWebImageOptions(rawValue: 0), completed: { (image, error, cacheType, imageURL) in
+                
+                guard let path = imageURL?.path else{
+                    return
+                }
+                guard let img = image else{
+                    return
+                }
+                let tempDirectoryUrl = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(path)
+                guard let url = img.save(at: tempDirectoryUrl) else {
+                    return
+                    
+                }
+                print("Успешно сохранено! :\(url)")
+            })
+            return cell
+            
+        }
+        cell.imageView?.image = writenImage
         return cell
     }
 }
