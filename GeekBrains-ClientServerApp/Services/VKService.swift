@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import RealmSwift
 
 class VKService: NSObject {
 
@@ -42,7 +43,7 @@ class VKService: NSObject {
         }
     }
     
-    func getFriends(completion: @escaping (_ result: FriendList)->()){
+    func getFriends(completion: @escaping (_ result: List<FriendList>)->()){
         let session = Session.instance
         
         let URL = "https://api.vk.com/method/friends.get?user_id=\(session.userId)&access_token=\(session.token)&order=name&fields=city,domain&name_case=ins&count=5&fields=photo_50&v=5.68"
@@ -54,11 +55,11 @@ class VKService: NSObject {
             
             if let friendList = responseObject?.response {
                 completion(friendList)
-                if let friends = friendList.items{
-                    for friend in friends{
-                        print("friend: \(String(describing: friend.name))")
-                    }
-                }
+//                if let friends = friendList.items{
+//                    for friend in friends{
+//                        print("friend: \(String(describing: friend.name))")
+//                    }
+//                }
             }
         }
     }

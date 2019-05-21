@@ -6,7 +6,8 @@ target 'GeekBrains-ClientServerApp' do
   use_frameworks!
 
   # Pods for GeekBrains-ClientServerApp
-
+  pod 'ObjectMapper+Realm'
+  pod 'RealmSwift'
 	pod 'Alamofire', '5.0.0-beta.3'
   pod 'AlamofireObjectMapper'
   pod 'SDWebImage'

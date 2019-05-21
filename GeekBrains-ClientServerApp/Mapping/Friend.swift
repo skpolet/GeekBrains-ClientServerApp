@@ -10,16 +10,22 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
-
-class Friend: Mappable {
-    var name: String?
-    var lastname: String?
-    var photo_50: String?
-    var online: String?
+class Friend: Object, Mappable {
+//    var name: String?
+//    var lastname: String?
+//    var photo_50: String?
+//    var online: String?
     
-    required init?(map: Map){
-        
+    @objc dynamic var name: String = ""
+    @objc dynamic var lastname: String = ""
+    @objc dynamic var photo_50: String = ""
+    @objc dynamic var online: String = ""
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
