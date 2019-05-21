@@ -10,13 +10,18 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import ObjectMapper_Realm
+import RealmSwift
 
-
-class FriendList: Mappable {
-    var count: String?
-    var items: [Friend]?
+class FriendList: Object, Mappable {
+    //var count: String?
+    //var items: [Friend]?
     
-    required init?(map: Map){
+    @objc dynamic var count: String = ""
+    var items = List<Friend>()
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
